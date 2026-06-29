@@ -3,6 +3,9 @@ from pytest_playwright.pytest_playwright import page
 
 from python_project.helper.utils import take_screenshot, log_message
 from python_project.page_objects.base_page import BasePage
+from python_project.page_objects.main_page import MainPage
+
+
 class LoginPage(BasePage):
     def __init__(self, page : Page):
         super().__init__(page)
