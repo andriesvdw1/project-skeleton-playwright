@@ -21,4 +21,4 @@ def setup_playwright(playwright, request):
 def setup_load_page(setup_playwright):
         login_page =  LoginPage(setup_playwright)
         login_page.navigate_to(URL)
-        log_message(logging.getLogger(), f"navigate to {URL}")
+        log_message(logging.getLogger(), f"navigate to {URL}", LogLevel.INFO)
