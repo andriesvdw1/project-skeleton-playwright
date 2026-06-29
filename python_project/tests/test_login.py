@@ -1,5 +1,5 @@
 import playwright
-
+import logging
 from python_project.helper.config import VALID_CREDENTIALS
 
 
