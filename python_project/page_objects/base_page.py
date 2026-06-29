@@ -1,6 +1,8 @@
 import logging  # Fixed: Added missing import
 from playwright.sync_api import Page, Locator
-from python_project.helper.utils import LogLevel
+from python_project.helper.utils import LogLevel, take_screenshot
+
+
 # Note: Ensure that whatever provides 'log.message' is imported here if it's a custom helper.
 # If you don't have a custom 'log' module, you can use self.logger directly (see alternative below).
 
@@ -18,7 +20,7 @@ class BasePage:
             action(*args)
         except Exception as e:
             self.logger.error(f"Failed executing {action_name} with arguments {args}. Error: {e}")
-            # self.page.screenshot(path=f"{action_name}_error.png")
+            take_screenshot(self.page, action_name)
             raise
 
     def click_element(self, locator: Locator):
