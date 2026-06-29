@@ -1,3 +1,3 @@
-URL = "https://www.facebook.com/"
+URL = "http://localhost:3000/login"
 
-VALID_CREDENTIALS = {"email": "invalidEmail@example.com", "password": "password"}
+VALID_CREDENTIALS = {"username": "user", "password": "password"}
